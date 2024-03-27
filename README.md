@@ -31,6 +31,8 @@ Reload udev rules: `sudo udevadm control --reload-rules && sudo udevadm trigger`
 
 5. Restart `sudo reboot` 
 
+## Note that I have not tested this on a raspberry pi yet
+
 **When booting raspberrypi, do not plug in the pHAT module. Signals from UART will interrupt boot process. Plugin pHAT after the pi is booted.**
 
 **When plugging in pHAT, tilted the pHAT so that the power pins are connected last. For some reason if the power pins are touched first, raspberrypi will reboot and cause the issue mentioned above.**
@@ -60,18 +62,18 @@ def geo_cov(self):
 
 Details on ublox messages can be found [here](https://www.u-blox.com/sites/default/files/u-blox-F9-HPG-1.30_InterfaceDescription_UBX-21046737.pdf).
 
-## Download ROS 2
+## Download ROS
 ---
-Follow the guide [here](https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Debians.html) to install ROS 2 Foxy. 
+Follow the guide [here](https://wiki.ros.org/noetic/Installation/Ubuntu) to install ROS Noetic. 
 
 ## Download the package and build.
 ---
 ```
 cd [your_ros_ws]/src
-git clone https://github.com/FrankBu0616/ros2_zed_f9r_gps.git
+git clone https://github.com/mkoujiri/ros1_zed_f9r_gps.git
 cd ..
-colcon build
-source install/setup.bash
+catkin_make
+source devel/setup.bash
 ```
 
-To start publishing data, `ros2 run zed_f9r_gps gps_publisher`.
+To start publishing data, `rosrun zed_f9r_gps publish_gps_data.py`.
