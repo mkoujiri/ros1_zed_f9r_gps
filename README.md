@@ -37,8 +37,6 @@ Reload udev rules: `sudo udevadm control --reload-rules && sudo udevadm trigger`
 
 **TODO: disable UART temporarily during boot should solve this problem, will update once I manage to get it working.**
 
-<img src="gps_assemble.jpg" width="200">
-
 ## Download ublox python package and customize
 ---
 Download sparkfun ublox package. (Requires Python3 and pip3, spidev.)
