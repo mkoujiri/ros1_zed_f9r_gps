@@ -1,10 +1,10 @@
 # README 
 
-This is guide on streaming GPS data from SparkFun GPS-RTK Dead Reckoning pHAT for Raspberry Pi (ZED-F9R) through ROS 2. Since ROS 2 does not officially Raspbian, I installed Ubuntu 20.04 on raspberry pi. 
+This is guide on streaming GPS data from SparkFun GPS-RTK Dead Reckoning pHAT for Raspberry Pi (ZED-F9R) through ROS. Since our project requires ROS1, I installed Ubuntu 20.04 on the raspberry pi. 
 
 ## Install Ubuntu 20.04 on raspberry pi.
 ---
-There is no official image for ubuntu 20.04 desktop for raspberry pi. However, you can install [ubuntu 20.04 server](https://ubuntu.com/download/raspberry-pi) and then install ubuntu-desktop `sudo apt-get install ubuntu-desktop`. [Update: It seems that Lubuntu Desktop is more stable operation on a raspberry pi, I used [desktopify](https://github.com/wimpysworld/desktopify) to install Lubuntu Desktop on my ubuntu server.]
+There is no official image for ubuntu 20.04 desktop for raspberry pi. However, you can install [ubuntu 20.04 server](https://ubuntu.com/download/raspberry-pi)
 
 ## Enable UART on raspberry pi for Ubuntu
 ---
